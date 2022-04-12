@@ -1,0 +1,53 @@
+#SUB-SECTOR F: The Straights SECTOR: Outer Arm
+#--------1---------2---------3---------4---------5-------
+#PlanetName   Loc. UPP Code   B   Notes         Z  PBG Al
+#----------   ---- ---------  - --------------- -  --- --
+Kathrynia     0911 E200576-4    Ni Va              312 Cd
+Saimeis       0912 C588449-4    Ni                 100 Cd
+Concetoria    0913 C374230-6    Lo                 410 Cd
+Petriana      0915 CADA653-A  S Fl Ni Wa           222 Cd
+Valetia       0920 B745230-D  S Lo Ht              125 Gt
+ABASTY        1011 E663ACE-8    Hi                 312 Cd
+Ethes         1015 B5A66AB-6  N Fl Ni              302 Cd
+Planielaia    1017 A668675-7  N Ag Ni Ri        A  224 Gt
+Essiegebe     1018 D58A774-4    Ri Wa              803 Gt
+Komsomasa     1019 D55A416-7    Ni Wa              124 Gt
+Chergiea      1020 B636464-C    Ni                 413 Gt
+Newtonita     1111 X121000-0    Ba Po           R  012 Cd
+Ebeckiese     1112 D66A305-A    Lo Wa              111 Cd
+Piccolova     1113 B236211-D  N Lo Co Ht Na        121 Cd
+Proskip       1114 B658243-7  A Lo                 133 Cd
+Reziosama     1115 C100320-8    Lo Va              202 Cd
+Kardine       1119 X584000-0    Ba              R  021 Gt
+Poldia        1120 A5546BB-9  N Ag Ni              502 Gt
+Chestin       1213 B446876-8    Co                 725 Cd
+Turnegia      1216 X836000-0    Ba              R  023 Hn
+Leutonica     1217 A322277-B    Lo Po           A  411 Hn
+ATLANTHE      1219 A1009BB-D  N Hi In Na Va Ht     510 An
+Neraldisol    1220 D145867-6    Co                 124 An
+Amesseliza    1311 D522252-6  P Lo Po              303 Nr
+Matamann      1312 X597000-0    Ba              R  021 Nr
+SASHINE       1315 A669978-9  N Hi Cp              414 In
+Naantherk     1316 C9C8112-8    Fl Lo              110 Hn
+Larielstia    1317 B757661-5  N Ag Ni              203 Hn
+Justar        1319 D20089A-8  S Na Va              224 An
+Unie          1411 A569A69-F  N Hi Ht              314 Nr
+Fulviana      1412 B897400-8  N Ni                 324 Nr
+Thisele       1413 CA85146-6  G Lo                 300 In
+Klumene       1414 XAEA7BC-2    Fl Wa           R  104 In
+Gefiorea      1415 E98A455-9    Ni Wa              134 Hn
+Amontare      1416 A57957B-9    Ni Co           A  523 Hn
+Zubama        1417 D344599-6  S Ag Ni              124 Hn
+Hantisleen    1418 B557345-B    Lo                 502 Ny
+PIPPERNA      1420 C344973-8    Hi In              913 An
+Ronitanita    1511 C000687-7    As Na Ni           213 Nr
+Deirachima    1512 C545312-9    Lo                 710 Nr
+Mallegia      1514 C300227-6  S Lo Va              102 In
+Kahrenisia    1517 D998577-2  S Ag Ni              504 Hn
+Aspanula      1519 E665522-6    Ag Ni              412 Ny
+BODESSE       1520 C0009BE-8  S As Hi In Na        121 Ny
+Molatonos     1611 X9C8577-0    Fl Ni           R  210 Nn
+Melisan       1613 B400616-C  S Na Ni Va Ht        212 In
+Candi         1615 B66549B-C  N Ni Co Ht           121 Hn
+Melopolla     1616 B99A545-D  N Ni Wa Ht           103 Hn
+Betulie       1620 D57A523-8  S Ni Wa Co           510 Ny

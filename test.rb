@@ -1,3 +1,18 @@
+#---------------------------------------------------------------------------------
+# The following distributes incoming arguments to exactly three variables
+=begin
+
+first, second, third = ARGV
+
+For just one argument:
+user_name = ARGV.first # gets the first argument
+
+
+NOTE: if using arguments via ARGV, you need to use <<<  $stdin.gets.chomp >>> 
+instead of gets.chomp to force the program to use standard input interactively
+with the user instead of confusing it re: user interactive vs ARGV input
+
+=end
 
 # "puts" prints to command line
 
@@ -135,6 +150,91 @@ end
 puts
 puts "The return result is: #{num}"
 puts
+
+
+
+# Function Defs
+# this one is like your scripts with ARGV
+def print_two(*args)
+    arg1, arg2 = args
+    puts "arg1: #{arg1}, arg2: #{arg2}"
+  end
+  
+  # ok, that *args is actually pointless, we can just do this
+  def print_two_again(arg1, arg2)
+    puts "arg1: #{arg1}, arg2: #{arg2}"
+  end
+  
+  # this just takes one argument
+  def print_one(arg1)
+    puts "arg1: #{arg1}"
+  end
+  
+  # this one takes no arguments
+  def print_none()
+    puts "I got nothin'."
+  end
+  
+  
+  print_two("Zed","Shaw")
+  print_two_again("Zed","Shaw")
+  print_one("First!")
+  print_none()
+
+
+
+# IF syntax
+if cars > people
+    puts "We should take the cars."
+  elsif cars < people
+    puts "We should not take the cars."
+  else
+    puts "We can't decide."
+  end
+
+
+
+
+# FOR LOOP---------------------
+the_count = [1, 2, 3, 4, 5]
+fruits = ['apples', 'oranges', 'pears', 'apricots']
+change = [1, 'pennies', 2, 'dimes', 3, 'quarters']
+
+# this first kind of for-loop goes through a list
+# in a more traditional style found in other languages
+for number in the_count
+  puts "This is count #{number}"
+end
+
+# same as above, but in a more Ruby style
+# this and the next one are the preferred 
+# way Ruby for-loops are written
+fruits.each do |fruit|
+  puts "A fruit of type: #{fruit}"
+end
+
+# also we can go through mixed lists too
+# note this is yet another style, exactly like above
+# but a different syntax (way to write it).
+change.each {|i| puts "I got #{i}" }
+
+# we can also build lists, first start with an empty one
+elements = []
+
+# then use the range operator to do 0 to 5 counts
+(0..5).each do |i|
+  puts "adding #{i} to the list."
+  # pushes the i variable on the *end* of the list
+  elements.push(i)
+end
+
+# now we can print them out too
+elements.each {|i| puts "Element was: #{i}" }
+
+
+
+
+
 
 
 
