@@ -93,12 +93,84 @@ PLANET_FORMAT_REGEX = %r{
     $
 }x
 
-# METHODS
+# METHODS / FUNCTIONS
 
-def write_starport_classa(port_class)
-    puts "**Starport Class:** #{port_class}"
+def write_starport_class(port_class)
+    port_classes = {
+        "A" => "Excellent quality installation. Refined fuel available. Annual maintenance overhaul available. Shipyard capable of constructing starships and non-starships present.",
+        "B" => "Good quality installation. Refined fuel available. Annual maintenance overhaul available. Shipyard capable of constructing non-starships present.",
+        "C" => "Routine quality installation. Only unrefined fuel available. Reasonable repair facilities present.",
+        "D" => "Poor quality installation. Only unrefined fuel available. No repair or shipyard facilities present.",
+        "E" => "Frontier Installation. Essentially a marked spot of bedrock with no fuel, facilities, or bases present.",
+        "X" => "No starport, or any provisions made for ship landings"
+    }
+
+    puts "> **Starport Class:** #{port_class} - #{port_classes[port_class]}"
+end    
+
+def write_planet_size(planet_size)
+    planet_sizes = {
+        "0" => ["800 km or less (typically an asteroid)","0.00","low-gravity"],
+        "1" => ["1,600 km","0.05","low-gravity"],
+        "2" => ["3,200 km","0.15","low-gravity"],
+        "3" => ["4,800 km","0.25","low-gravity"],
+        "4" => ["6,400 km","0.35","low-gravity"],
+        "5" => ["8,000 km","0.45","low-gravity"],
+        "6" => ["9,600 km","0.7","low-gravity"],
+        "7" => ["11,200 km","0.9","normal gravity"],
+        "8" => ["12,800 km","1.0","normal gravity"],
+        "9" => ["14,400 km","1.25","high-gravity"],
+        "A" => ["16,000","1.4","high-gravity"]
+    }
+
+    puts "> **Planet size:** Code:#{planet_size}, roughly #{planet_sizes[planet_size][0]} with a gravity of #{planet_sizes[planet_size][1]}g, considered a  #{planet_sizes[planet_size][2]} world"
+end    
+
+def write_planet_atmo(planet_atmo)
+    planet_atmos = {
+        "0" => ["none","0.00","vacc suit"],
+        "1" => ["trace","0.001 to 0.09","vacc suit"],
+        "2" => ["very thin, tainted","0.1 to 0.42","respirator, filter"],
+        "3" => ["very thin","0.1 to 0.42","respirator"],
+        "4" => ["thin, tainted","0.43 to 0.7","filter"],
+        "5" => ["thin","0.43 to 0.7","none"],
+        "6" => ["standard","0.71-1.49","none"],
+        "7" => ["standard,tainted","0.71-1.49","filter"],
+        "8" => ["dense","1.5 to 2.49","none"],
+        "9" => ["dense, tainted","1.5 to 2.49","filter"],
+        "A" => ["exotic","varies","air supply"],
+        "B" => ["corrosive","varies","vacc suit"],
+        "C" => ["insidious","varies","vacc suit"],
+        "D" => ["dense, high","2.5+","none"],
+        "E" => ["thin, low","0.5 or less","none"],
+        "F" => ["unusual","varies","varies"]
+    }
+
+    puts "> **Planet atmosphere:** Code:#{planet_atmo}"
+    puts "> -Type: #{planet_atmos[planet_atmo][0]}"
+    puts "> -Pressure: #{planet_atmos[planet_atmo][1]}"
+    puts "> -Survival gear required: #{planet_atmos[planet_atmo][2]}"
+end    
+
+
+
+
+
+
+def write_bases(base_type)
+    base_types = {
+        "none" => "No bases present.",
+        "A" => "Naval and Scout bases are present.",
+        "G" => "Scout base or outpost is present. There are rumors of a pirate base.",
+        "N" => "Naval base is present.",
+        "P" => "Believed a pirate bse is present.",
+        "S" => "A scout base or outpost is present"
+    }
+
+    puts "**Bases Present:** #{base_type} : #{base_types[base_type]}"
     puts
 end    
+
 
 # CLASSES
 
@@ -152,13 +224,32 @@ File.foreach(filename).with_index do |line, line_num|
             puts
             puts "# The #{system_name} system" 
             puts
-            puts "*#{line}*"
+            puts "`#{line.rstrip}`"
             puts
             puts "**Hex map grid:** #{system_hex}"
             puts
             puts "**UWWP/UPP:*• #{system_uwp}"
             puts
-            write_starport_classa(uwp_starport)
+            ## remaining UWP Values
+            #starport
+            write_starport_class(uwp_starport)
+            # size
+            write_planet_size(uwp_size)
+            #atmosphere
+            write_planet_atmo(uwp_atmo)
+            # water / hydrographic percentage
+
+            # population
+
+            # government
+
+            #law level
+
+            #tech level
+
+            puts
+            # Bases present
+            write_bases(system_base)
 
             # starport - 
 
