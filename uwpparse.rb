@@ -147,9 +147,9 @@ def write_planet_atmo(planet_atmo)
     }
 
     puts "> **Planet atmosphere:** Code:#{planet_atmo}"
-    puts "> -Type: #{planet_atmos[planet_atmo][0]}"
-    puts "> -Pressure: #{planet_atmos[planet_atmo][1]}"
-    puts "> -Survival gear required: #{planet_atmos[planet_atmo][2]}"
+    puts "> - Type: #{planet_atmos[planet_atmo][0]}"
+    puts "> - Pressure: #{planet_atmos[planet_atmo][1]}"
+    puts "> - Survival gear required: #{planet_atmos[planet_atmo][2]}"
 end    
 
 
@@ -228,15 +228,18 @@ File.foreach(filename).with_index do |line, line_num|
             puts
             puts "**Hex map grid:** #{system_hex}"
             puts
-            puts "**UWWP/UPP:*• #{system_uwp}"
+            puts "**UWWP/UPP:** #{system_uwp}"
             puts
             ## remaining UWP Values
             #starport
             write_starport_class(uwp_starport)
+            puts "> "
             # size
             write_planet_size(uwp_size)
+            puts "> "
             #atmosphere
             write_planet_atmo(uwp_atmo)
+            puts "> "
             # water / hydrographic percentage
 
             # population
