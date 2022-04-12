@@ -50,4 +50,4 @@ Molatonos     1611 X9C8577-0    Fl Ni           R  210 Nn
 Melisan       1613 B400616-C  S Na Ni Va Ht        212 In
 Candi         1615 B66549B-C  N Ni Co Ht           121 Hn
 Melopolla     1616 B99A545-D  N Ni Wa Ht           103 Hn
-Betulie       1620 D57A523-8  S Ni Wa Co           510 Ny
+Betulie       1620 D57A523-8  S                    510 Ny

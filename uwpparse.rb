@@ -68,6 +68,9 @@ planet_format = %r{
 
 filename = ARGV.first
 
+# !!!!!!! Make an ARGV
+sector_name = "Outer Worlds"
+
 PLANET_FORMAT_REGEX = %r{
     ^                                       # beginning of line
     \s*                                     # zero or more opening spaces
@@ -92,17 +95,94 @@ PLANET_FORMAT_REGEX = %r{
 
 # METHODS
 
+def write_starport_classa(port_class)
+    puts "**Starport Class:** #{port_class}"
+    puts
+end    
+
 # CLASSES
 
 # MAIN
 
-#File.foreach(filename).with_index do |line, line_num|
+puts "title:  Stellar Atlas for the #{sector_name} sector."
+puts "-"*80
+
 File.foreach(filename).with_index do |line, line_num|
         # trial for output
-    puts "#{line_num}:  #{line}"
+        # puts "#{line_num}:  #{line}"
 
-    # ignore lines starting with "#"  - use pure regex to pick apart the SEC file
-    # ignore whitespace/ empty lines    
-    # if line is full and NOT "noformat"
+        match = line.match(PLANET_FORMAT_REGEX)
 
+        if match    
+            # "unclean" values
+            system_name = match['Name'].rstrip
+            system_hex = match['Hex']
+            system_uwp = match['UWP']
+            system_base = match['Base'].gsub(/\s/,"none")
+
+            # need to clear all-whitespace version first
+            system_remarks_temp = match['Remarks'].gsub(/\s{10}/,"none")
+            system_remarks = system_remarks_temp.rstrip
+        
+            system_zone = match['Zone'].gsub(/\s/,"none")
+            system_pbg = match['PBG']
+            system_ally = match['Allegiance']
+
+            # need to further split UWP, remarks, and PBG
+            pbg_pop = system_pbg[0]
+            pbg_belts = system_pbg[1]
+            pbg_gas_giants = system_pbg[2]
+
+            system_remark_codes = system_remarks.split(' ')
+
+            uwp_starport = system_uwp[0]
+            uwp_size = system_uwp[1]
+            uwp_atmo = system_uwp[2]
+            uwp_hydro = system_uwp[3]
+            uwp_pop = system_uwp[4]
+            uwp_govt = system_uwp[5]
+            uwp_law = system_uwp[6]
+            uwp_tech = system_uwp[8]
+            
+            # now do text dump for each value
+            #!!!!!!!! Later change to file dump
+            
+            # name - 
+            puts "---------------- TEMP SEPATATOR -----------------"
+            puts
+            puts "# The #{system_name} system" 
+            puts
+            puts "*#{line}*"
+            puts
+            puts "**Hex map grid:** #{system_hex}"
+            puts
+            puts "**UWWP/UPP:*• #{system_uwp}"
+            puts
+            write_starport_classa(uwp_starport)
+
+            # starport - 
+
+            puts "It has base type : [#{system_base}]"
+            puts
+            puts "Applicable trade codes : \n"
+            puts
+             
+            system_remark_codes.each() do |sys_code|
+                puts "\t- [#{sys_code}]"
+            end
+            puts
+
+            puts "System zone: [#{system_zone}]"
+            puts
+            puts "System PBG codes: [#{system_pbg}] with a pop multiplier of [#{pbg_pop}], [#{pbg_belts}] belt(s), and [#{pbg_gas_giants}] gas giant(s)"
+            puts
+            puts "System Alliances: [#{system_ally}]"
+            puts
+
+            ### Cleanup
+            
+        else
+            puts "No valid entry on line index [ #{line_num} ]"
+
+        end
  end
