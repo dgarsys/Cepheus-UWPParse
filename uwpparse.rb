@@ -312,11 +312,11 @@ end
 
 def format_trade_codes(trade_codes)
 
-    trade_types = {                             #see T5 book 3 page 26 for more options - may also want to expand population parser
+    trade_types = {                             #added T5 book 3 page 26 for more options - may also want to expand population parser
         "none" => "No bases present. ",
         "Ag" => "Agricultural. ",
         "As" => "Asteroid. ",
-        "Ba" => "barren. ",
+        "Ba" => "Barren. ",
         "De" => "Desert. ",
         "Fl" => "Fluid Oceans (Atmo A+). ",
         "Ga" => "Garden. ",
@@ -329,7 +329,37 @@ def format_trade_codes(trade_codes)
         "Ni" => "Non Industrial. ",
         "Po" => "Poor. ",
         "Ri" => "Rich. ",
+        "He" => "Hellworld. ",
+        "Oc" => "Ocean world. ",
+        "Sa" => "Satellite. ",
+        "Lk" => "Locked. ",
         "Wa" => "Water world. ",
+        "Di" => "Dieback. ",
+        "Ph" => "Pre-high population. ",
+        "Pa" => "Pre-agricultural. ",
+        "Na" => "Non-agricultural. ",
+        "Px" => "Prison World or Exile. ",
+        "Pi" => "Pre-industrial. ",
+        "Pr" => "Pre-rich. ",
+        "Fr" => "Frozen. ",
+        "Ho" => "Hot. ",
+        "Co" => "Cold. ",
+        "Tr" => "Tropic. ",
+        "Tu" => "Tundra. ",
+        "Tz" => "Twilight Zone. ",
+        "Fa" => "Farming. ",
+        "Mi" => "Mining. ",
+        "Mr" => "Military Rule. ",
+        "Pe" => "Penal colony. ",
+        "Re" => "Reserve. ",
+        "Cp" => "Subsector Capital. ",
+        "Cx" => "Capital. ",
+        "Cy" => "Colony. ",
+        "Fo" => "Forbidden. ",
+        "Pz" => "Puzzle. ",
+        "Da" => "Dangerous. ",
+        "Ab" => "Data repository. ",
+        "An" => "Ancient Site. ",
         "Va" => "Vacuum. "
     }
 
@@ -337,13 +367,33 @@ def format_trade_codes(trade_codes)
 
     line_01 = "**Applicable trade codes:** "
 
-     
+    puts "==========================>>>>> \nPassed in trade codes:[#{trade_codes}]\n==========================>>>>>\n\n"
     trade_codes.each() do |sys_code|
+        puts "==========================>>>>> \nSys Code: [#{sys_code}]\n==========================>>>>>\n\n"
+        puts "==============trying to get trade types for [#{sys_code}]"
+        puts "==============trade type for [#{sys_code}] is : #{trade_types[sys_code]}"
         line_01 = line_01 + trade_types[sys_code]
     end
     line_01 = line_01 + "\n\n"
 
     return line_01
+
+=begin
+## The Piccolova system
+.....
+**Bases Present:** N : Naval base is present.
+
+uwpparse.rb:342:in `+': no implicit conversion of nil into String (TypeError)
+        from uwpparse.rb:342:in `block in format_trade_codes'
+        from uwpparse.rb:341:in `each'
+        from uwpparse.rb:341:in `format_trade_codes'
+        from uwpparse.rb:449:in `block in <main>'
+        from uwpparse.rb:362:in `foreach'
+        from uwpparse.rb:362:in `with_index'
+        from uwpparse.rb:362:in `<main>'
+        
+=end
+
 end
 
 # CLASSES
