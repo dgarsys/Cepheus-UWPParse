@@ -367,33 +367,31 @@ def format_trade_codes(trade_codes)
 
     line_01 = "**Applicable trade codes:** "
 
-    puts "==========================>>>>> \nPassed in trade codes:[#{trade_codes}]\n==========================>>>>>\n\n"
+    #puts "==========================>>>>> \nPassed in trade codes:[#{trade_codes}]\n==========================>>>>>\n\n"
     trade_codes.each() do |sys_code|
-        puts "==========================>>>>> \nSys Code: [#{sys_code}]\n==========================>>>>>\n\n"
-        puts "==============trying to get trade types for [#{sys_code}]"
-        puts "==============trade type for [#{sys_code}] is : #{trade_types[sys_code]}"
+        #puts "==========================>>>>> \nSys Code: [#{sys_code}]\n==========================>>>>>\n\n"
+        #puts "==============trying to get trade types for [#{sys_code}]"
+        #puts "==============trade type for [#{sys_code}] is : #{trade_types[sys_code]}"
         line_01 = line_01 + trade_types[sys_code]
     end
     line_01 = line_01 + "\n\n"
 
     return line_01
+end
 
-=begin
-## The Piccolova system
-.....
-**Bases Present:** N : Naval base is present.
+def format_travel(zone)
+    zones ={
+        "none" => "None - No more dangerous than usual.\n\n",
+        "A" => "Amber - Deemed dangerous, and travelers are warned to be on their guard. May be undergoing upheaval or revolution, or has a naturally hazardous environment.\n\n",
+        "R" => "Red Zone - Interdicted and travel to them is forbidden. Interdictions may be enforced by the Navy, automatic defenses, or the fact no-one returns.\n\n"
+    }
 
-uwpparse.rb:342:in `+': no implicit conversion of nil into String (TypeError)
-        from uwpparse.rb:342:in `block in format_trade_codes'
-        from uwpparse.rb:341:in `each'
-        from uwpparse.rb:341:in `format_trade_codes'
-        from uwpparse.rb:449:in `block in <main>'
-        from uwpparse.rb:362:in `foreach'
-        from uwpparse.rb:362:in `with_index'
-        from uwpparse.rb:362:in `<main>'
-        
-=end
+    return "**Travel Restrictions :** #{zones[zone]}"
 
+end
+
+def format_features(belts,gas_giants)
+    return "**Other System Features:**\n\n- Asteroid Belts: #{belts}\n- Gas Giants: #{gas_giants}\n\n"
 end
 
 # CLASSES
@@ -499,13 +497,14 @@ File.foreach(filename).with_index do |line, line_num|
             system_ally = match['Allegiance']
 =end
 
+            # Travel Zones
+            add_to_file(save_filename,format_travel(system_zone))               # output travel zones - amber and red mostly
 
-            puts "System zone: [#{system_zone}]"
-            puts
-            puts "System PBG codes: [#{system_pbg}] with a pop multiplier of [#{pbg_pop}], [#{pbg_belts}] belt(s), and [#{pbg_gas_giants}] gas giant(s)"
-            puts
-            puts "System Alliances: [#{system_ally}]"
-            puts
+            # Features
+            add_to_file(save_filename,format_features(belts,gas_giants))        # output system features
+
+            # Alliances
+            add_to_file(save_filename,"System Alliances: #{system_ally}\n\n")        # output system features
 
             ### Cleanup
             
