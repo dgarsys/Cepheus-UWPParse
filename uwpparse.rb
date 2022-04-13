@@ -450,7 +450,7 @@ File.foreach(filename).with_index do |line, line_num|
             # name - 
 
             add_to_file(save_filename,"---------\n\n")                          # Output separator for each system
-            add_to_file(save_filename,"## The #{system_name} system\n\n")       # Output System Name as header2 (header 1 will be added for subsectors)
+            add_to_file(save_filename,"## #{system_hex} - The #{system_name} system\n\n")       # Output System Name as header2 (header 1 will be added for subsectors)
             add_to_file(save_filename,"`#{line.rstrip}`\n\n")                   # Output full system UWP line as code block
             add_to_file(save_filename,"**Hex map grid:** #{system_hex}\n\n")    # output hex map grid coordinate
             add_to_file(save_filename,"**UWWP/UPP:** #{system_uwp}\n\n")        # output UWP code
@@ -486,22 +486,11 @@ File.foreach(filename).with_index do |line, line_num|
             # trade codes
             add_to_file(save_filename,format_trade_codes(system_remark_codes))  # output the text description of trade codes
 
-            
-
-# -----------------------------------REMAINING TO ENTER BEFORE dump to file and maybe sort
-=begin       
-            system_zone = match['Zone'].gsub(/\s/,"none")
-            pbg_belts = system_pbg[1]
-            pbg_gas_giants = system_pbg[2]
-
-            system_ally = match['Allegiance']
-=end
-
             # Travel Zones
             add_to_file(save_filename,format_travel(system_zone))               # output travel zones - amber and red mostly
 
             # Features
-            add_to_file(save_filename,format_features(belts,gas_giants))        # output system features
+            add_to_file(save_filename,format_features(pbg_belts,pbg_gas_giants))        # output system features
 
             # Alliances
             add_to_file(save_filename,"System Alliances: #{system_ally}\n\n")        # output system features
