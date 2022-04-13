@@ -14,6 +14,21 @@ Intent of the program is to feed in a file in SEC column-delimited format, break
 different respective fields, then take each bit and, from a list of keyed values, export out a makrkdown 
 text file describing the system
 
+# Usage
+
+call this file with the argument of the input file name - relative path in same directory
+
+it is assumed the filename has a "." in it (.txt, .md, .sec, etc)
+
+it is assumed the file is in the same directory and has no slashes/dots/etc
+
+
+# THINGS TO ADD
+ - file checking and rename via argv including full paths
+ - existing file safety and auto-rename
+ - pull subsector names?
+
+
 Sample regex from : https://travellermap.com/doc/fileformats
 
 ^
@@ -67,6 +82,9 @@ planet_format = %r{
 # SETUP
 
 filename = ARGV.first
+save_tempname = filename.split(".")
+save_filename = "#{save_tempname.first}_almanac.md"         # use with add_to_file(save_filename,outputblock)
+
 
 # !!!!!!! Make an ARGV
 sector_name = "Outer Worlds"
@@ -94,6 +112,15 @@ PLANET_FORMAT_REGEX = %r{
 }x
 
 # METHODS / FUNCTIONS
+
+
+def add_to_file(outfile,outputblock)
+    puts outputblock
+    File.open(outfile, "a+") do |file|
+        file.puts(outputblock)
+end
+      
+end
 
 def write_starport_class(port_class)
     port_classes = {
@@ -152,9 +179,118 @@ def write_planet_atmo(planet_atmo)
     puts "> - Survival gear required: #{planet_atmos[planet_atmo][2]}"
 end    
 
+def write_planet_hydro(planet_hydro)
+    planet_hydros = {
+        "0" => ["0-5%","Desert world"],
+        "1" => ["6-15%","Dry world"],
+        "2" => ["16-25%","A few small seas"],
+        "3" => ["26-35%","Small seas and oceans",],
+        "4" => ["36-45%","Wet world"],
+        "5" => ["46-55%","Large oceans"],
+        "6" => ["56-65%","Large oceans"],
+        "7" => ["66-75","Earthlike, many large oceans"],
+        "8" => ["76-85%","Water world"],
+        "9" => ["86-95%","Only a few small islands and archipelagos"],
+        "A" => ["96-100%","Almost entirely water"]
+    }
+
+    puts "> **Hydrographics** code:#{planet_hydro} - PLanet is #{planet_hydros[planet_hydro][0]} water. #{planet_hydros[planet_hydro][1]}"
+end    
+
+def write_planet_pop(planet_pop, planet_pop_modifier)
+    planet_pops = {
+        "0" => [0,0],
+        "1" => [10,1],
+        "2" => [100,2],
+        "3" => [1000,3],
+        "4" => [10000,4],
+        "5" => [100000,5],
+        "6" => [1000000,6],
+        "7" => [10000000,7],
+        "8" => [100000000,8],
+        "9" => [1000000000,9],
+        "A" => [10000000000,10]
+    }
+
+    puts "> **Population** code:#{planet_pop} mod #{planet_pop_modifier} - Approximately: #{planet_pops[planet_pop][0]*planet_pops[planet_pop_modifier][1]}"
+end    
 
 
 
+def write_planet_govt(planet_govt)
+    planet_govts = {
+        "0" => "None",
+        "1" => "Company/Corporation",
+        "2" => "Participating Democracy",
+        "3" => "Self-perpetuating Oligarchy",
+        "4" => "Representative Democracy",
+        "5" => "Fuedal Technocracy",
+        "6" => "Captive Government",
+        "7" => "Balkanization",
+        "8" => "Civil Service Bureaucracy",
+        "9" => "Impersonal Bureaucracy",
+        "A" => "Charismatic Dictator",
+        "B" => "Non-charismatic Leader",
+        "C" => "Charismatic Oligarchy",
+        "D" => "Religious Dictatorship",
+        "E" => "Religious Autocracy",
+        "F" => "Totalitarian Oligarchy"
+    }
+
+    puts "> **Overall government type** code:#{planet_govt} - #{planet_govts[planet_govt]}"
+
+end
+
+
+def write_planet_law(planet_law)
+    planet_laws = {
+        "0" => ["No law","No restrictions; candidate for Amber Zone status."],
+        "1" => ["No law","Poison gas, explosives, undetectable weapons, weapons of mass destruction."],
+        "2" => ["No law",     "Poison gas, explosives, undetectable weapons, weapons of mass destruction. Portable energy weapons (except ship-mounted weapons)."],
+        "3" => ["No law",     "Poison gas, explosives, undetectable weapons, weapons of mass destruction. Portable energy weapons (except ship-mounted weapons). Heavy weapons. ",],
+        "4" => ["Medium law", "Poison gas, explosives, undetectable weapons, weapons of mass destruction. Portable energy weapons (except ship-mounted weapons). Heavy weapons. Light assault weapons and submachine guns. "],
+        "5" => ["Medium law", "Poison gas, explosives, undetectable weapons, weapons of mass destruction. Portable energy weapons (except ship-mounted weapons). Heavy weapons. Light assault weapons and submachine guns. Personal concealable weapons."],
+        "6" => ["Medium law", "Poison gas, explosives, undetectable weapons, weapons of mass destruction. Portable energy weapons (except ship-mounted weapons). All firearms except shotguns and stunners. Carrying weapons discouraged. "],
+        "7" => ["High law",   "Poison gas, explosives, undetectable weapons, weapons of mass destruction. Portable energy weapons (except ship-mounted weapons). All firearms except stunners. Carrying weapons discouraged. "],
+        "8" => ["High law",   "Poison gas, explosives, undetectable weapons, weapons of mass destruction. Portable energy weapons (except ship-mounted weapons). All firearms including stunners. All bladed weapons (generally not including knives). Carrying weapons discouraged. "],
+        "9" => ["High law",   "Poison gas, explosives, undetectable weapons, weapons of mass destruction. Portable energy weapons (except ship-mounted weapons). Any weapons, even small knives, outside of one's residence. Candidate for Amber Zone status."],
+        "A" => ["Extreme law","No weapons allowed at all. Candidate for Amber Zone status."],
+        "B" => ["Extreme law","No weapons allowed at all. Candidate for Amber Zone status."],
+        "C" => ["Extreme law","No weapons allowed at all. Candidate for Amber Zone status."],
+        "D" => ["Extreme law","No weapons allowed at all. Candidate for Amber Zone status."],
+        "E" => ["Extreme law","No weapons allowed at all. Candidate for Amber Zone status."],
+        "F" => ["Extreme law","No weapons allowed at all. Candidate for Amber Zone status."]
+    }
+
+    puts "> **Law Level** code:#{planet_law} - #{planet_laws[planet_law][0]}. Restrictions: #{planet_laws[planet_law][1]}"
+end    
+
+
+
+
+# https://www.orffenspace.com/cepheus-srd/equipment.html
+def write_planet_techlevel(planet_tech)
+    planet_techs = {
+        "0" => ["Primitive","No technology."],
+        "1" => ["Primitive","Roughly on a par with Bronze or Iron age technology."],
+        "2" => ["Primitive","Renaissance technology."],
+        "3" => ["Primitive","Mass production allows for product standardization, bringing the germ of industrial revolution and steam power.",],
+        "4" => ["Industrial","Transition to industrial revolution is complete, bringing plastics, radio and other such inventions."],
+        "5" => ["Industrial","Widespread electrification, tele-communications and internal combustion."],
+        "6" => ["Industrial","Development of fission power and more advanced computing."],
+        "7" => ["Pre-stellar","Can reach orbit reliably and has telecommunications satellites."],
+        "8" => ["Pre-stellar","Possible to reach other worlds in the same system, although terraforming or full colonization is not within the culture's capacity."],
+        "9" => ["Pre-stellar","Development of gravity manipulation, which makes space travel vastly safer and faster; first steps into Jump Drive technology."],
+        "A" => ["Early stellar","With the advent of Jump, nearby systems are opened up."],
+        "B" => ["Early stellar", "The first primitive (non-creative) artificial intelligences become possible in the form of low autonomous interfaces, as computers begin to model synaptic networks."],
+        "C" => ["Average Stellar","Weather control revolutionizes terraforming and agriculture."],
+        "D" => ["Average Stellar","The battle dress appears on the battlefield in response to the new weapons. High autonomous interfaces allow computers to become self-actuating and self-teaching."],
+        "E" => ["Average Stellar","Fusion weapons become man-portable."],
+        "F" => ["High Stellar","Black globe generators suggest a new direction for defensive technologies, while the development of synthetic anagathics means that the human lifespan is now vastly increased."]
+    }
+
+    puts "> **Tech Level:** Code:#{planet_tech} - #{planet_techs[planet_tech][0]} -  #{planet_techs[planet_tech][1]}"
+end
 
 
 def write_bases(base_type)
@@ -163,7 +299,7 @@ def write_bases(base_type)
         "A" => "Naval and Scout bases are present.",
         "G" => "Scout base or outpost is present. There are rumors of a pirate base.",
         "N" => "Naval base is present.",
-        "P" => "Believed a pirate bse is present.",
+        "P" => "Believed a pirate base is present.",
         "S" => "A scout base or outpost is present"
     }
 
@@ -172,20 +308,27 @@ def write_bases(base_type)
 end    
 
 
+
 # CLASSES
 
 # MAIN
 
-puts "title:  Stellar Atlas for the #{sector_name} sector."
-puts "-"*80
+# Output headers to stdout and file
+#---------------------------------------------------------------------
+ 
+add_to_file(save_filename,"title:  Stellar Atlas for the #{sector_name} sector.\n\n")
 
+out_line = "-"*80 + "\n\n"
+add_to_file(save_filename,out_line)
+
+# Read input file to parse and process results
 File.foreach(filename).with_index do |line, line_num|
         # trial for output
         # puts "#{line_num}:  #{line}"
 
-        match = line.match(PLANET_FORMAT_REGEX)
+        match = line.match(PLANET_FORMAT_REGEX)         # check if the line is a valid planet description line
 
-        if match    
+        if match                                        # if it matches, it's a real line! Pull the values
             # "unclean" values
             system_name = match['Name'].rstrip
             system_hex = match['Hex']
@@ -220,17 +363,14 @@ File.foreach(filename).with_index do |line, line_num|
             #!!!!!!!! Later change to file dump
             
             # name - 
-            puts "---------------- TEMP SEPATATOR -----------------"
-            puts
-            puts "# The #{system_name} system" 
-            puts
-            puts "`#{line.rstrip}`"
-            puts
-            puts "**Hex map grid:** #{system_hex}"
-            puts
-            puts "**UWWP/UPP:** #{system_uwp}"
-            puts
-            ## remaining UWP Values
+
+            add_to_file(save_filename,"---------\n\n")                              # Output separator for each system
+            add_to_file(save_filename,"## The #{system_name} system\n\n")       # Output System Name as header2 (header 1 will be added for subsectors)
+            add_to_file(save_filename,"`#{line.rstrip}`\n\n")                   # Output full system UWP line as code block
+            add_to_file(save_filename,"**Hex map grid:** #{system_hex}\n\n")    # output hex map grid coordinate
+            add_to_file(save_filename,"**UWWP/UPP:** #{system_uwp}\n\n")        # output UWP code
+
+            ## Elaborate on UWP Values
             #starport
             write_starport_class(uwp_starport)
             puts "> "
@@ -241,23 +381,36 @@ File.foreach(filename).with_index do |line, line_num|
             write_planet_atmo(uwp_atmo)
             puts "> "
             # water / hydrographic percentage
-
+            write_planet_hydro(uwp_hydro)
+            puts "> "
             # population
-
+            write_planet_pop(uwp_pop, pbg_pop)
+            puts "> "
             # government
-
+            write_planet_govt(uwp_govt)
+            puts "> "
             #law level
-
+            write_planet_law(uwp_law)
+            puts "> "
             #tech level
+            write_planet_techlevel(uwp_tech)
 
             puts
             # Bases present
             write_bases(system_base)
 
-            # starport - 
+            # -----------------------------------REMAINING TO ENTER BEFORE dump to file and maybe sort
+=begin
+             system_remark_codes = system_remarks.split(' ')
+       
+            system_zone = match['Zone'].gsub(/\s/,"none")
+            pbg_belts = system_pbg[1]
+            pbg_gas_giants = system_pbg[2]
 
-            puts "It has base type : [#{system_base}]"
-            puts
+            system_ally = match['Allegiance']
+=end
+
+puts
             puts "Applicable trade codes : \n"
             puts
              
@@ -275,8 +428,8 @@ File.foreach(filename).with_index do |line, line_num|
 
             ### Cleanup
             
-        else
-            puts "No valid entry on line index [ #{line_num} ]"
-
+        else    # does not match as a valid UWP line - throw a warning
+            add_to_file(save_filename,"Not recognized as valid entry on line index [ #{line_num} ]\n\n")
+            add_to_file(save_filename,"`#{line}`")
         end
  end
