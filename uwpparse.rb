@@ -22,6 +22,8 @@ it is assumed the filename has a "." in it (.txt, .md, .sec, etc)
 
 it is assumed the file is in the same directory and has no slashes/dots/etc
 
+it is assumed we're using CT or Cepheus classifications, not T5
+
 
 # THINGS TO ADD
  - file checking and rename via argv including full paths
@@ -132,7 +134,7 @@ def write_starport_class(port_class)
         "X" => "No starport, or any provisions made for ship landings"
     }
 
-    puts "> **Starport Class:** #{port_class} - #{port_classes[port_class]}"
+    return "> **Starport Class:** #{port_class} - #{port_classes[port_class]}\n> \n"
 end    
 
 def write_planet_size(planet_size)
@@ -150,7 +152,7 @@ def write_planet_size(planet_size)
         "A" => ["16,000","1.4","high-gravity"]
     }
 
-    puts "> **Planet size:** Code:#{planet_size}, roughly #{planet_sizes[planet_size][0]} with a gravity of #{planet_sizes[planet_size][1]}g, considered a  #{planet_sizes[planet_size][2]} world"
+    return "> **Planet size:** Code:#{planet_size}, roughly #{planet_sizes[planet_size][0]} with a gravity of #{planet_sizes[planet_size][1]}g, considered a  #{planet_sizes[planet_size][2]} world.\n> \n"
 end    
 
 def write_planet_atmo(planet_atmo)
@@ -173,10 +175,12 @@ def write_planet_atmo(planet_atmo)
         "F" => ["unusual","varies","varies"]
     }
 
-    puts "> **Planet atmosphere:** Code:#{planet_atmo}"
-    puts "> - Type: #{planet_atmos[planet_atmo][0]}"
-    puts "> - Pressure: #{planet_atmos[planet_atmo][1]}"
-    puts "> - Survival gear required: #{planet_atmos[planet_atmo][2]}"
+    line_01 = "> **Planet atmosphere:** Code:#{planet_atmo}"
+    line_02 = "> - Type: #{planet_atmos[planet_atmo][0]}"
+    line_03 = "> - Pressure: #{planet_atmos[planet_atmo][1]}"
+    line_04 = "> - Survival gear required: #{planet_atmos[planet_atmo][2]}"
+
+    return "> #{line_01}\n> #{line_02}\n> #{line_03}\n> #{line_04}\n> \n"
 end    
 
 def write_planet_hydro(planet_hydro)
@@ -194,7 +198,7 @@ def write_planet_hydro(planet_hydro)
         "A" => ["96-100%","Almost entirely water"]
     }
 
-    puts "> **Hydrographics** code:#{planet_hydro} - PLanet is #{planet_hydros[planet_hydro][0]} water. #{planet_hydros[planet_hydro][1]}"
+    return "> **Hydrographics** code:#{planet_hydro} - PLanet is #{planet_hydros[planet_hydro][0]} water. #{planet_hydros[planet_hydro][1]}\n> \n"
 end    
 
 def write_planet_pop(planet_pop, planet_pop_modifier)
@@ -212,7 +216,7 @@ def write_planet_pop(planet_pop, planet_pop_modifier)
         "A" => [10000000000,10]
     }
 
-    puts "> **Population** code:#{planet_pop} mod #{planet_pop_modifier} - Approximately: #{planet_pops[planet_pop][0]*planet_pops[planet_pop_modifier][1]}"
+    return "> **Population** code:#{planet_pop} mod #{planet_pop_modifier} - Approximately: #{planet_pops[planet_pop][0]*planet_pops[planet_pop_modifier][1]}\n> \n"
 end    
 
 
@@ -237,7 +241,7 @@ def write_planet_govt(planet_govt)
         "F" => "Totalitarian Oligarchy"
     }
 
-    puts "> **Overall government type** code:#{planet_govt} - #{planet_govts[planet_govt]}"
+    return "> **Overall government type** code:#{planet_govt} - #{planet_govts[planet_govt]}\n> \n"
 
 end
 
@@ -262,7 +266,7 @@ def write_planet_law(planet_law)
         "F" => ["Extreme law","No weapons allowed at all. Candidate for Amber Zone status."]
     }
 
-    puts "> **Law Level** code:#{planet_law} - #{planet_laws[planet_law][0]}. Restrictions: #{planet_laws[planet_law][1]}"
+    return "> **Law Level** code:#{planet_law} - #{planet_laws[planet_law][0]}. Restrictions: #{planet_laws[planet_law][1]}\n> \n"
 end    
 
 
@@ -289,7 +293,7 @@ def write_planet_techlevel(planet_tech)
         "F" => ["High Stellar","Black globe generators suggest a new direction for defensive technologies, while the development of synthetic anagathics means that the human lifespan is now vastly increased."]
     }
 
-    puts "> **Tech Level:** Code:#{planet_tech} - #{planet_techs[planet_tech][0]} -  #{planet_techs[planet_tech][1]}"
+    return "> **Tech Level:** Code:#{planet_tech} - #{planet_techs[planet_tech][0]} -  #{planet_techs[planet_tech][1]}\n> \n"
 end
 
 
@@ -303,11 +307,44 @@ def write_bases(base_type)
         "S" => "A scout base or outpost is present"
     }
 
-    puts "**Bases Present:** #{base_type} : #{base_types[base_type]}"
-    puts
+    return "**Bases Present:** #{base_type} : #{base_types[base_type]}\n\n"
 end    
 
+def format_trade_codes(trade_codes)
 
+    trade_types = {                             #see T5 book 3 page 26 for more options - may also want to expand population parser
+        "none" => "No bases present. ",
+        "Ag" => "Agricultural. ",
+        "As" => "Asteroid. ",
+        "Ba" => "barren. ",
+        "De" => "Desert. ",
+        "Fl" => "Fluid Oceans (Atmo A+). ",
+        "Ga" => "Garden. ",
+        "Hi" => "High Population. ",
+        "Ht" => "High Technology. ",
+        "Ic" => "Ice-capped. ",
+        "In" => "Industrial. ",
+        "Lo" => "Low Population. ",
+        "Lt" => "Low Technology. ",
+        "Ni" => "Non Industrial. ",
+        "Po" => "Poor. ",
+        "Ri" => "Rich. ",
+        "Wa" => "Water world. ",
+        "Va" => "Vacuum. "
+    }
+
+
+
+    line_01 = "**Applicable trade codes:** "
+
+     
+    trade_codes.each() do |sys_code|
+        line_01 = line_01 + trade_types[sys_code]
+    end
+    line_01 = line_01 + "\n\n"
+
+    return line_01
+end
 
 # CLASSES
 
@@ -364,7 +401,7 @@ File.foreach(filename).with_index do |line, line_num|
             
             # name - 
 
-            add_to_file(save_filename,"---------\n\n")                              # Output separator for each system
+            add_to_file(save_filename,"---------\n\n")                          # Output separator for each system
             add_to_file(save_filename,"## The #{system_name} system\n\n")       # Output System Name as header2 (header 1 will be added for subsectors)
             add_to_file(save_filename,"`#{line.rstrip}`\n\n")                   # Output full system UWP line as code block
             add_to_file(save_filename,"**Hex map grid:** #{system_hex}\n\n")    # output hex map grid coordinate
@@ -372,37 +409,39 @@ File.foreach(filename).with_index do |line, line_num|
 
             ## Elaborate on UWP Values
             #starport
-            write_starport_class(uwp_starport)
-            puts "> "
+            add_to_file(save_filename,write_starport_class(uwp_starport))       # output the text description of the starport class and follower line
+
             # size
-            write_planet_size(uwp_size)
-            puts "> "
+            add_to_file(save_filename,write_planet_size(uwp_size))              # output the text description of the planet size and follower line
+
             #atmosphere
-            write_planet_atmo(uwp_atmo)
-            puts "> "
+            add_to_file(save_filename,write_planet_atmo(uwp_atmo))              # output the text description of the planet atmosphere and follower line
+
             # water / hydrographic percentage
-            write_planet_hydro(uwp_hydro)
-            puts "> "
+            add_to_file(save_filename,write_planet_hydro(uwp_hydro))            # output the text description of the planet hydrographics and follower line
+
             # population
-            write_planet_pop(uwp_pop, pbg_pop)
-            puts "> "
+            add_to_file(save_filename,write_planet_pop(uwp_pop, pbg_pop))       # output the text description of the planet population including multiplier
+
             # government
-            write_planet_govt(uwp_govt)
-            puts "> "
+            add_to_file(save_filename,write_planet_govt(uwp_govt))              # output the text description of the planet government and follower line
+
             #law level
-            write_planet_law(uwp_law)
-            puts "> "
+            add_to_file(save_filename,write_planet_law(uwp_law))                # output the text description of the planet law level
+
             #tech level
-            write_planet_techlevel(uwp_tech)
-
-            puts
+            add_to_file(save_filename,write_planet_techlevel(uwp_tech))         # output the text description of the planet tech level
+ 
             # Bases present
-            write_bases(system_base)
+            add_to_file(save_filename,write_bases(system_base))                 # output the text description of system bases
 
-            # -----------------------------------REMAINING TO ENTER BEFORE dump to file and maybe sort
-=begin
-             system_remark_codes = system_remarks.split(' ')
-       
+            # trade codes
+            add_to_file(save_filename,format_trade_codes(system_remark_codes))  # output the text description of trade codes
+
+            
+
+# -----------------------------------REMAINING TO ENTER BEFORE dump to file and maybe sort
+=begin       
             system_zone = match['Zone'].gsub(/\s/,"none")
             pbg_belts = system_pbg[1]
             pbg_gas_giants = system_pbg[2]
@@ -410,14 +449,6 @@ File.foreach(filename).with_index do |line, line_num|
             system_ally = match['Allegiance']
 =end
 
-puts
-            puts "Applicable trade codes : \n"
-            puts
-             
-            system_remark_codes.each() do |sys_code|
-                puts "\t- [#{sys_code}]"
-            end
-            puts
 
             puts "System zone: [#{system_zone}]"
             puts
