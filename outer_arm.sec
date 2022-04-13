@@ -1,0 +1,430 @@
+                                                                           
+# 
+#SUB-SECTOR A: Concordance SECTOR: Outer Arm
+#--------1---------2---------3---------4---------5-------
+#PlanetName   Loc. UPP Code   B   Notes         Z  PBG Al
+#----------   ---- ---------  - --------------- -  --- --
+Krysoni       0101 B548212-8    Lo                 400 Nb
+Epimetz       0103 CA77355-6  S Lo                 703 Nb
+Protilofer    0104 C678795-4  S Ag                 535 Nb
+Gehniva       0110 B267AEC-C  2 Hi Cp              315 Nb
+Ithalie       0202 BAA3522-A  N Fl Ni              223 Nb
+Nofret        0206 A879100-F  N Lo              A  324 Nb
+Nellauda      0207 D200843-6    Na Va              302 Nb
+Opaea         0304 C348359-A    Lo                 100 Nb
+Kastruda      0307 B572410-7  N Ni                 124 Nb
+Tsiolkova     0308 C454651-9    Ag Ni              800 Nb
+Floriska      0401 A9768AA-A  N                    713 Kx
+Phine         0403 X68A000-0    Ba Wa           R  013 Na
+Saskarina     0404 A225414-F  S Ni                 614 Nb
+Carite        0405 A69A244-E    Lo Wa Co           200 Nb
+Shelsey       0408 X9A6455-3    Fl Ni           R  435 Nb
+Sakhaikaa     0502 C6A9100-8  S Fl Lo              100 Kx
+Utrauda       0503 B446240-8    Lo                 200 Kx
+LAUT          0505 C75AACB-B  S Hi Wa              302 Nb
+Casepho       0506 D110200-B    Lo                 603 Nb
+Frandusa      0507 C368464-5    Ni                 910 Nb
+Fidunas       0508 E533545-4    Ni Po              534 Nb
+Fricolo       0510 E8A9522-5    Fl Ni              622 Nb
+Semilyna      0601 C523452-A  S Ni Po Co           904 Kx
+Ricelly       0602 B745556-7    Ag Ni              600 Kx
+Canirae       0603 B100767-B    Na Va              304 Kx
+OFERNY        0604 X530ADD-0    De Hi Na Po     R  105 Kx
+Alfret        0606 C352335-7    Lo Po              114 Na
+Sappelsony    0607 C478446-9  S Ni                 523 Nb
+Galautonya    0704 E8C8663-2    Fl Ni              402 Kx
+Mavisis       0706 E79A557-5    Ni Wa              313 Kx
+Jackluna      0707 C201465-9    Ic Ni Va           620 Na
+Holdsche      0708 A200244-B    Lo Va              225 Nb
+Saristopio    0709 D999532-8  S Ni                 110 Nb
+Borgina       0804 A666146-9  S Lo                 212 Kx
+Kastaantia    0806 B76A79D-C  N Ri Wa              203 Kx
+Makonon       0807 D157372-8  S Lo                 123 Kx
+Korotinen     0810 C133567-B  S Ni Po              303 Nb
+#               
+#
+#
+#SUB-SECTOR B: New Republic SECTOR: Outer Arm
+#--------1---------2---------3---------4---------5-------
+#PlanetName   Loc. UPP Code   B   Notes         Z  PBG Al
+#----------   ---- ---------  - --------------- -  --- --
+AMINA         0901 B3009EF-9    Hi In Na Va        423 My
+Jeffer        0902 B77A511-A  S Ni Wa              222 My
+Chelsey       0903 C510443-7    Ni                 210 My
+Walliette     0904 C548279-7  S Lo                 902 My
+Nephthilar    0905 B63388A-9  2 Po Co              802 My
+Candusia      0906 C7B8755-9  S Fl                 712 Na
+Almquile      0907 C631230-7  S Lo Po              103 Na
+Eriphos       1003 A430400-C    De Ni Po        A  710 My
+Alkmessa      1005 D735749-2  S                    512 My
+Cantine       1009 C387663-4  S Ag Ni Ri           202 Hc
+Pattiennie    1101 C89A323-7  S Lo Wa              822 My
+Afranah       1102 D8C8564-5  S Fl Ni              711 My
+Apolovacie    1103 C586456-8  S Ni                 301 My
+Gallaa        1104 E6558CE-3                       115 My
+Zwetlana      1105 A544489-B  N Ni                 600 Na
+Bertrude      1107 E534554-8    Ni Co              324 Na
+Berus         1108 E456421-5    Ni                 113 Hc
+Almatheus     1109 X7886BC-1    Ag Ni           R  123 Hc
+Meyermia      1203 C655100-6  S Lo              A  214 My
+Rebelle       1204 E587332-3    Lo                 114 Na
+Nadimitch     1207 C645598-9    Ag Ni              234 Hc
+Delonto       1210 C000699-A    As Na Ni           622 Na
+Susande       1303 C833313-5  S Lo Po              813 Na
+Robbe         1307 BA62232-9    Lo                 724 Hc
+Deidreda      1308 A67A840-9    Wa                 400 Hc
+Askij         1309 B565444-A  2 Ni                 124 Hc
+Quelaira      1310 C100537-7  S Ni Va              613 Hc
+Polson        1401 D9C9842-5  S Fl                 303 My
+Methertha     1402 B79A200-B    Lo Wa              124 Na
+Ivarsita      1403 C458200-7    Lo                 214 Hc
+Baidelindy    1406 C446759-9  S Ag                 112 Hc
+Friennia      1408 A687446-B    Ni                 333 Hc
+Janinetta     1409 C669301-9  S Lo                 122 Hc
+Kleopaeo      1502 E434425-8    Ni                 112 Hc
+Nuevo Washingt1504 A310668-D    Na Ni Cp           124 Hc
+Ebelicia      1507 A785352-E    Lo                 102 Hc
+Tycho         1510 C641244-4    Lo Po           A  104 Na
+Zubambis      1602 E210442-4    Ni                 110 Hc
+Fiducrema     1603 A200667-A    Na Ni Va           400 Hc
+Aidelby       1604 C234422-9    Ni Co              203 Hc
+Mozarthus     1606 B7C8456-7    Fl Ni              203 Hc
+CLORES        1608 C7A59BB-A    Fl Hi              904 Na
+#
+#
+#SUB-SECTOR C: New Nijon SECTOR: Outer Arm
+#--------1---------2---------3---------4---------5-------
+#PlanetName   Loc. UPP Code   B   Notes         Z  PBG Al
+#----------   ---- ---------  - --------------- -  --- --
+Cassi         1703 E876610-6    Ag Ni              700 Na
+Agua          1704 D5516B6-6  S Ni Po              123 Pc
+Emaitrenia    1705 X555000-0    Ba              R  024 Na
+Melinsona     1708 B200845-C  S Na Va              220 Mk
+Julinur       1709 C8DA8DB-3    Fl Wa              103 Mk
+Robellas      1802 X461000-0    Ba              R  024 Pc
+Simela        1807 C696254-8  S Lo                 204 Mk
+Biarmela      1808 C442730-7  S Po                 124 Mk
+Minen         1810 A720355-B    De Lo Po           124 Mk
+Vesteresda    1904 CAC5720-5    Fl                 104 Pc
+Serana        1905 C7A6330-8  S Fl Lo              201 Na
+Erneruskij    1906 X623000-0    Ba Po           R  024 Mk
+Augustania    1910 B379577-B  N Ni                 123 Mk
+Tabandria     2003 B778343-A    Lo                 301 Pc
+Paavondi      2006 C2666A9-5  S Ag Ni              623 Mk
+Sakura        2007 A33268A-E  S Na Ni Po Cp        300 Mk
+Parier        2010 B400222-A  N Lo Va              402 Mk
+Estep         2102 B7C57CE-8  N Fl                 713 Pc
+Brigitty      2109 C535833-4                       100 Mk
+Lakishann     2110 A000244-D    As Lo              124 Mk
+Lucinandra    2202 A738532-D    Ni                 723 Pc
+Kriellena     2203 D200322-7    Lo Va              320 Pc
+Simetha       2204 C10046A-7    Ni Va              224 Pc
+Reidredani    2210 C455210-9    Lo                 122 Mk
+Imhoterra     2301 B856310-B    Lo                 912 Pc
+Hybrigitta    2302 E545410-7    Ni                 500 Pc
+Astrida       2304 A897645-9    Ag Ni              504 Pc
+Heder         2306 A446325-A  N Lo                 722 Mk
+Steranche     2308 A625236-B  N Lo                 224 Mk
+Therria       2408 C200875-6  S Na Va           A  200 Mk
+Justani       2409 D425300-A  S Lo                 513 Mk
+Liona         2410 B310434-D    Ni                 603 Mk
+#
+#
+#SUB-SECTOR E: Concordance SECTOR: Outer Arm
+#--------1---------2---------3---------4---------5-------
+#PlanetName   Loc. UPP Code   B   Notes         Z  PBG Al
+#----------   ---- ---------  - --------------- -  --- --
+Georgara      0111 C5798A9-8  S                    623 Do
+Baudena       0112 C38A687-8  S Ni Ri Wa           324 Do
+Ritaka        0116 C99A487-9    Ni Wa              111 Do
+Mercela       0117 E587643-3    Ag Ni Ri           323 Do
+Lucreta       0118 A574436-C  N Ni                 323 Do
+Ambrov        0119 A110565-F    Ni                 523 Do
+Giomettani    0211 C735338-A    Lo                 111 Na
+Peithaka      0213 C41079B-5  S Na                 124 Do
+Hesisis       0215 C97A7AC-6    Wa Co              625 Do
+Brie          0216 E857859-4                       400 Do
+PROME         0217 B4419AE-C  N Hi In Po           214 Do
+Cassevene     0219 A41169E-E    Ic Na Ni           224 Do
+Isbonosowa    0311 X764643-1    Ag Ni Ri        R  114 Na
+Kathawe       0312 X530345-3    De Lo Po        R  300 Na
+Pars          0313 B486AAD-B  N Hi Cp              314 Do
+Laliana       0314 E8B5568-5    Fl Ni              222 Do
+Geristi       0316 X5A7000-0    Ba Fl           R  014 Do
+Euchsallie    0317 C624455-9  S Ni                 513 Do
+Alaine        0411 C75876A-4    Ag              A  402 Do
+Licilia       0412 D440210-5  S De Lo Po           523 Do
+Maristatry    0417 D78A697-6    Ni Ri Wa           624 Do
+Byblisabis    0419 D333656-4  S Ni Po              121 Ck
+Ilseanne      0511 X657000-0    Ba              R  024 Do
+Schilla       0514 C100574-B    Ni Va              900 Do
+Shelsie       0515 B453858-8  2 Po                 824 Do
+Bron          0518 D521453-7    Ni Po              813 Na
+Esperstina    0519 C7CA150-C    Fl Lo Wa           310 Ck
+Mauranzia     0611 B541374-A  S Lo Po              222 Do
+Iclary        0613 C869454-8  S Ni                 124 Do
+Poris         0614 B9A5110-B    Fl Lo              123 Do
+Shermene      0619 E9CA234-8    Fl Lo Wa           924 Ck
+Ragar         0620 A110134-D    Lo                 500 Ck
+Hagany        0711 A595640-8  N Ag Ni              424 Do
+Gothektor     0712 A88A366-B  N Lo Wa              613 Do
+Melinsen      0713 X68A000-0    Ba Wa           R  014 Do
+Abigalva      0714 E3457A8-6    Ag                 723 Do
+Lirikisti     0715 D59A330-8    Lo Wa              724 Do
+Glaura        0716 D778476-6    Ni                 701 Do
+Selanpaa      0812 A550552-C  N De Ni Po           112 Do
+Recharia      0813 B300879-A    Na Va           A  224 Na
+Selmina       0816 C347798-8    Ag                 124 Na
+Terhansa      0819 A588203-B  N Lo                 324 Ck
+#
+#
+#SUB-SECTOR F: The Straights SECTOR: Outer Arm
+#--------1---------2---------3---------4---------5-------
+#PlanetName   Loc. UPP Code   B   Notes         Z  PBG Al
+#----------   ---- ---------  - --------------- -  --- --
+Kathrynia     0911 E200576-4    Ni Va              312 Cd
+Saimeis       0912 C588449-4    Ni                 100 Cd
+Concetoria    0913 C374230-6    Lo                 410 Cd
+Petriana      0915 CADA653-A  S Fl Ni Wa           222 Cd
+Valetia       0920 B745230-D  S Lo Ht              125 Gt
+ABASTY        1011 E663ACE-8    Hi                 312 Cd
+Ethes         1015 B5A66AB-6  N Fl Ni              302 Cd
+Planielaia    1017 A668675-7  N Ag Ni Ri        A  224 Gt
+Essiegebe     1018 D58A774-4    Ri Wa              803 Gt
+Komsomasa     1019 D55A416-7    Ni Wa              124 Gt
+Chergiea      1020 B636464-C    Ni                 413 Gt
+Newtonita     1111 X121000-0    Ba Po           R  012 Cd
+Ebeckiese     1112 D66A305-A    Lo Wa              111 Cd
+Piccolova     1113 B236211-D  N Lo Co Ht Na        121 Cd
+Proskip       1114 B658243-7  A Lo                 133 Cd
+Reziosama     1115 C100320-8    Lo Va              202 Cd
+Kardine       1119 X584000-0    Ba              R  021 Gt
+Poldia        1120 A5546BB-9  N Ag Ni              502 Gt
+Chestin       1213 B446876-8    Co                 725 Cd
+Turnegia      1216 X836000-0    Ba              R  023 Hn
+Leutonica     1217 A322277-B    Lo Po           A  411 Hn
+ATLANTHE      1219 A1009BB-D  N Hi In Na Va Ht     510 An
+Neraldisol    1220 D145867-6    Co                 124 An
+Amesseliza    1311 D522252-6  P Lo Po              303 Nr
+Matamann      1312 X597000-0    Ba              R  021 Nr
+SASHINE       1315 A669978-9  N Hi Cp              414 In
+Naantherk     1316 C9C8112-8    Fl Lo              110 Hn
+Larielstia    1317 B757661-5  N Ag Ni              203 Hn
+Justar        1319 D20089A-8  S Na Va              224 An
+Unie          1411 A569A69-F  N Hi Ht              314 Nr
+Fulviana      1412 B897400-8  N Ni                 324 Nr
+Thisele       1413 CA85146-6  G Lo                 300 In
+Klumene       1414 XAEA7BC-2    Fl Wa           R  104 In
+Gefiorea      1415 E98A455-9    Ni Wa              134 Hn
+Amontare      1416 A57957B-9    Ni Co           A  523 Hn
+Zubama        1417 D344599-6  S Ag Ni              124 Hn
+Hantisleen    1418 B557345-B    Lo                 502 Ny
+PIPPERNA      1420 C344973-8    Hi In              913 An
+Ronitanita    1511 C000687-7    As Na Ni           213 Nr
+Deirachima    1512 C545312-9    Lo                 710 Nr
+Mallegia      1514 C300227-6  S Lo Va              102 In
+Kahrenisia    1517 D998577-2  S Ag Ni              504 Hn
+Aspanula      1519 E665522-6    Ag Ni              412 Ny
+BODESSE       1520 C0009BE-8  S As Hi In Na        121 Ny
+Molatonos     1611 X9C8577-0    Fl Ni           R  210 Nn
+Melisan       1613 B400616-C  S Na Ni Va Ht        212 In
+Candi         1615 B66549B-C  N Ni Co Ht           121 Hn
+Melopolla     1616 B99A545-D  N Ni Wa Ht           103 Hn
+Betulie       1620 D57A523-8  S Ni Wa Co           510 Ny
+#
+#
+#SUB-SECTOR G: Han SECTOR: Outer Arm
+#--------1---------2---------3---------4---------5-------
+#PlanetName   Loc. UPP Code   B   Notes         Z  PBG Al
+#----------   ---- ---------  - --------------- -  --- --
+Delaura       1712 E500100-4    Lo Va              403 Na
+Vitchella     1716 C433626-5    Ni Po              301 Na
+Afratis       1718 C787486-9    Ni                 203 Gi
+Masandra      1720 B577524-8  N Ag Ni              113 Gi
+Rannie        1811 D268762-4    Ag Ri              322 Zu
+Storothley    1813 B1006AC-B    Na Ni Va           133 Na
+Hirunsis      1815 C436121-9    Lo                 620 Na
+Srbin         1816 E74589A-3                       213 Na
+Kenskij       1819 E777740-6    Ag                 600 Gi
+Bache         1914 E684542-5    Ag Ni              613 Zu
+Amberberga    1918 B200443-D  N Ni Va              112 Gi
+Ramtin        1919 C210776-7  S Na                 122 Gi
+Pentilia      1920 D597642-1    Ag Ni           A  135 Gi
+Jokastara     2011 B224788-A  N                    200 Zu
+Hopmanne      2012 X310100-4    Lo              R  124 Zu
+Schansa       2013 DABA300-7  S Fl Lo Wa           700 Zu
+Glarole       2014 C437303-A    Lo                 600 Zu
+Stafitas      2015 C200611-5  S Na Ni Va           124 Zu
+Arabelle      2017 C66638C-8    Lo                 100 Na
+Ademitima     2018 D445786-4  S Ag                 521 Gi
+Kharina       2019 C310222-7  S Lo                 114 Gi
+Crimilia      2020 CA9A633-8    Ni Wa              324 Na
+Sibernamia    2113 C79A6A8-6  S Ni Wa              211 Zu
+Attonia       2114 D554587-5  S Ag Ni              135 Zu
+Shanghai      2115 B431A78-B  2 Hi Na Po Cp        223 Zu
+SALVAUX       2118 A454977-A    Hi              R  213 Gi
+Marlontas     2212 A773220-8    Lo                 824 Zu
+Rapia         2214 D978377-3    Lo              A  720 Zu
+Masseviant    2215 A300115-F  S Lo Va              410 Zu
+Channe        2216 E889446-8    Ni                 134 Zu
+Nelleriana    2219 D462765-4  S Ri                 302 Gi
+Ledalene      2220 B588576-7  S Ag Ni              111 Gi
+Caronor       2311 X243000-0    Ba Po           R  013 Zu
+Siguadea      2312 B231565-8  N Ni Po              523 Zu
+Esmercia      2315 E787730-5    Ag                 225 Zu
+Zu Chomed     2316 C744775-7  S Ag                 204 Zu
+Smuth         2319 B67968B-9    Ni                 522 Gi
+Racivero      2411 D551200-3    Lo Po              123 Zu
+Devossela     2412 B633400-D    Ni Po           A  304 Zu
+Patropa       2417 E9C3336-7    Fl Lo              302 Gi
+#
+#
+#SUB-SECTOR I: Guiterran SECTOR: Outer Arm
+# Subsector I 
+#--------1---------2---------3---------4---------5-------
+#PlanetName   Loc. UPP Code   B   Notes         Z  PBG Al
+#----------   ---- ---------  - --------------- -  --- --
+Jugustacia    0123 B8A4634-A    Fl Ni              124 Ub
+Lautraea      0126 C751669-8  S Ni Po              624 Ub
+Justania      0127 C76A548-7  S Ni Wa              104 Ub
+Chrissand     0129 D201766-3    Ic Na Va           112 Ub
+Halea         0130 A654521-C  2 Ag Ni              123 Na
+Amelley       0221 CA99521-5    Ni                 200 Na
+Ivarissa      0222 A6A97AD-9  N Fl                 102 Ub
+Rimussa       0223 E500899-6    Na Va              724 Ub
+Fraton        0226 C448610-8    Ag Ni              123 Ub
+LAVONNA       0227 C59A99E-7    Hi In Wa        A  211 Ub
+Laudreda      0229 D59A200-6  S Lo Wa           A  104 Ub
+Asillenne     0322 D527237-3  S Lo                 514 Na
+Suzett        0323 E66658A-5    Ag Ni              924 Ub
+Libusseus     0325 C510620-9  S Na Ni              214 Ub
+Micharry      0327 C535276-8    Lo                 334 Ub
+Romen         0328 A555563-9  N Ag Ni              114 Ub
+Smuthene      0424 B420202-B    De Lo Po        A  123 Ub
+OLYNAMELIA    0429 C545977-9    Hi In           A  313 Ms
+Perberin      0430 A543443-9  N Ni Po              323 Ms
+Namikhaida    0521 C210784-9    Na                 200 Na
+Valduinur     0522 X566000-0    Ba              R  025 Ub
+Circedea      0523 C545889-5  S                    224 Ub
+Leonid        0524 E387510-7    Ag Ni              100 Ub
+Brierry       0525 D000858-9  S As Na              424 Ub
+Carette       0526 X543300-0    Lo Po           R  113 Ub
+Herown        0527 B21069B-7    Na Ni              135 Ub
+Suomila       0529 A89A442-A  N Ni Wa              203 Ms
+San Miguel    0530 B337A9B-F    Hi Cp              223 Ms
+Noemercula    0623 C885440-4    Ni                 625 Ub
+Keishanine    0624 X410000-0    Ba              R  022 Ub
+Combasta      0626 C689100-8    Lo                 410 Ub
+Eugelio       0627 A740545-D  N De Ni Po           100 Ub
+KATEINMUT     0629 D2419A7-9  S Hi In Po           804 Ms
+Sofalato      0721 B674402-7  2 Ni Co              625 Ub
+McElora       0723 C550254-8  S De Lo Po           603 Ub
+Carollonia    0725 E45659A-8    Ag Ni              213 Ub
+Zahristine    0727 A342589-A  S Ni Po              915 Na
+Vanlinia      0728 D567525-6    Ag Ni              202 Ms
+Rosyne        0730 E557105-7    Lo                 125 Ms
+Alkmessa      0821 B788224-7    Lo                 104 Ub
+Chellerin     0822 A584576-D    Ag Ni              202 Ub
+SABETA        0823 A256997-C    Hi                 122 Ub
+Castacey      0825 D420447-7    De Ni Po           201 Ub
+Jodieck       0826 E864376-2    Lo                 201 Ub
+Boliviane     0827 B979503-C  N Ni                 502 Na
+Guacose       0828 C1257A6-A                       722 Na
+#
+#
+#SUB-SECTOR J: Andalus SECTOR: Outer Arm
+#--------1---------2---------3---------4---------5-------
+#PlanetName   Loc. UPP Code   B   Notes         Z  PBG Al
+#----------   ---- ---------  - --------------- -  --- --
+Mogentina     0921 A674222-C  N Lo                 210 Lk
+Appertina     0922 A788300-A    Lo                 320 Lk
+Tampejann     0924 C657468-7  S Ni                 724 Na
+Lilakis       0926 A200610-B  S Na Ni Va           323 Ds
+Keligunda     0927 E424447-8    Ni                 214 Ds
+Branckiese    0929 C236885-5                       113 Ds
+San Miguel    0930 A9A6AAD-D    Fl Hi Cp           124 Ds
+Strobeda      1021 C7B4459-8    Fl Ni              500 Lk
+Debota        1022 E8AA203-5    Fl Lo Wa        A  613 Lk
+Aisleena      1025 E200520-8    Ni Va              623 Ds
+Lumbille      1026 C787587-9  S Ag Ni              413 Ds
+Vladileen     1122 A400531-A    Ni Va              100 Lk
+Wandy         1124 X8A8636-0    Fl Ni           R  323 Na
+Melestina     1125 D68A876-3  S Ri Wa           A  303 Ds
+Chlorinens    1127 C100410-9  S Ni Va              813 Ds
+Galawanda     1129 C888488-5    Ni                 103 Ds
+BARBYSHERI    1221 B746957-A  N Hi In Co           722 Lk
+Tarahms       1222 C5577A8-7  S Ag                 313 Lk
+Cherike       1224 A54478B-8  N Ag                 513 Na
+Rosophina     1227 A000742-B    As Na              423 Ds
+Comassina     1228 E9C8433-5    Fl Ni              213 Ds
+Mathenya      1230 D2208A7-6  S De Na Po           724 Ds
+Diotilz       1321 A200520-F  N Ni Va              713 Lk
+Mellestia     1323 C9C9413-9  S Fl Ni              315 Lk
+Theida        1326 D310212-6    Lo                 424 Ds
+Sigriquete    1327 A76A778-C    Ri Wa Co           500 Ds
+Alessa        1328 B7A6588-9  N Fl Ni              202 Ds
+Juewalda      1330 B673563-9  N Ni                 410 Ds
+Rechubaize    1423 E585651-7    Ag Ni Ri           524 Lk
+Ameia         1425 X453335-3    Lo Po           R  104 Na
+SHELINK       1426 B54599E-7  N Hi In              905 Ds
+Erianca       1428 C89A36A-B    Lo Wa Co           523 Ds
+SLIPPE        1430 E677A96-5    Hi In              324 Ds
+Cathery       1522 A556887-A                       103 Lk
+Krescula      1525 CA9577B-8    Ag                 222 Na
+TIFFERNAMI    1526 C767986-6  S Hi                 904 Ds
+Zelice        1529 D9EA599-8  S Fl Ni Wa           114 Na
+Ismon         1530 X000000-0    As Ba           R  012 Na
+Porietty      1621 D89A88D-4  S Wa              A  524 Lk
+Simonalda     1624 C9DA565-8  S Fl Ni Wa           803 Ds
+Budrun        1625 B2107A7-7  S Na                 113 Ds
+Velinda       1629 E4275AB-6    Ni                 211 Ds
+#
+#
+#SUB-SECTOR K: Noviya SECTOR: Outer Arm
+#--------1---------2---------3---------4---------5-------
+#PlanetName   Loc. UPP Code   B   Notes         Z  PBG Al
+#----------   ---- ---------  - --------------- -  --- --
+MISTRACE      1721 AAA7987-A  2 Fl Hi              120 Wx
+Corrain       1722 E542525-6    Ni Po              921 Wx
+Reneld        1723 C57978B-4                       720 Na
+Sylvaris      1724 C775586-8  S Ag Ni              124 Na
+Delopola      1725 C5567BB-7  S Ag                 612 Kb
+Aetor         1727 A23278B-B  N Na Po              122 Kb
+Orcia         1822 C451695-4    Ni Po              313 Na
+Ernberna      1823 A887567-A  S Ag Ni              321 Wx
+Larysonda     1825 B766367-6  2 Lo                 112 Kb
+Michelley     1826 C427548-6    Ni                 322 Kb
+Vinine        1830 C89A674-7    Ni Wa              802 Kb
+Kathalice     1923 B531366-B  N Lo Po              623 Wx
+Muonis        1924 C410126-6  S Lo              A  624 Kb
+Mentala       1930 E645620-1    Ag Ni              624 Kb
+Massov        2021 D746310-5  S Lo                 903 Wx
+Casaline      2022 A9C5433-8    Fl Ni              414 Wx
+Noreria       2024 A444547-9    Ag Ni              303 Na
+Beli          2026 C873742-7                       134 Kb
+Cantigone     2027 B987333-8  N Lo Co              820 Kb
+Kiramonda     2028 CAC5222-4  S Fl Lo              123 Kb
+Petrgrad      2030 A300500-F  N Ni Va Cp           303 Kb
+IPHELLE       2121 B626989-A  N Hi In              412 Wx
+Margette      2122 A441899-C    Po Co              121 Wx
+Nericia       2124 A676577-8    Ag Ni              522 Na
+Antariette    2125 B42027C-8  2 De Lo Po        A  112 Kb
+WATELL        2127 C631986-A  S Hi Na Po Co        412 Kb
+Roberthawn    2129 B769543-B  2 Ni                 123 Kb
+Lucilla       2223 D963587-2    Ni                 804 Wx
+Sharjorda     2226 B888350-A    Lo                 323 Kb
+Stophild      2227 E678521-2    Ag Ni           A  100 Kb
+SORGIT        2228 D577ABC-9  S Hi In              324 Kb
+Paley         2230 A4567A8-D    Ag                 212 Kb
+ALASEPPA      2322 D2549BB-7  S Hi                 214 Wx
+Isbe          2324 D9DA740-5    Fl Wa              321 Na
+Marcelusch    2326 A6A9543-A  N Fl Ni              113 Kb
+Morossa       2328 XA87000-0    Ba              R  002 Kb
+Ponise        2422 D533567-7  S Ni Po              213 Wx
+Tamibila      2423 C533500-9    Ni Po              704 Wx
+Protild       2424 A625223-D    Lo                 414 Wx
+Newcombara    2429 C634220-6  S Lo                 211 Kb
+Pauletta      2430 D100489-7    Ni Va              113 Kb
+
+
+
