@@ -175,12 +175,12 @@ def write_planet_atmo(planet_atmo)
         "F" => ["unusual","varies","varies"]
     }
 
-    line_01 = "> **Planet atmosphere:** Code:#{planet_atmo}"
-    line_02 = "> - Type: #{planet_atmos[planet_atmo][0]}"
-    line_03 = "> - Pressure: #{planet_atmos[planet_atmo][1]}"
-    line_04 = "> - Survival gear required: #{planet_atmos[planet_atmo][2]}"
+    line_01 = " **Planet atmosphere:** Code:#{planet_atmo}"
+    line_02 = " - Type: #{planet_atmos[planet_atmo][0]}"
+    line_03 = " - Pressure: #{planet_atmos[planet_atmo][1]}"
+    line_04 = " - Survival gear required: #{planet_atmos[planet_atmo][2]}"
 
-    return "> #{line_01}\n> #{line_02}\n> #{line_03}\n> #{line_04}\n> \n"
+    return "> #{line_01}\n> \n>> #{line_02}\n>> #{line_03}\n>> #{line_04}\n> \n"
 end    
 
 def write_planet_hydro(planet_hydro)
@@ -449,7 +449,7 @@ File.foreach(filename).with_index do |line, line_num|
             
             # name - 
 
-            add_to_file(save_filename,"---------\n\n")                          # Output separator for each system
+            # add_to_file(save_filename,"---------\n\n")                          # Output separator for each system
             add_to_file(save_filename,"## #{system_hex} - The #{system_name} system\n\n")       # Output System Name as header2 (header 1 will be added for subsectors)
             add_to_file(save_filename,"`#{line.rstrip}`\n\n")                   # Output full system UWP line as code block
             add_to_file(save_filename,"**Hex map grid:** #{system_hex}\n\n")    # output hex map grid coordinate
